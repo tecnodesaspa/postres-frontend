@@ -384,11 +384,11 @@ textarea.form-control {
 }
 
 .services-section {
-  background: url("./assets/img/curve_line.svg") repeat-x bottom left;
+  /* background: url("./assets/img/curve_line.svg") repeat-x bottom left; */
 }
 
 .site-footer {
-  background: url("./assets/img/curve_line.svg") repeat-x top left;
+  /* background: url("./assets/img/curve_line.svg") repeat-x top left; */
   padding: 7em 0;
 }
 
