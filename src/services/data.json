@@ -1,0 +1,41 @@
+{
+    "Postres":
+    [
+        {
+            "name":"Arroz con leche",
+            "price": 650,
+            "description":"La receta de la abuela, el más rico arroz con leche en tu paladar",
+            "ingredients":["Arroz", "Leche", "Canela", "Clavo de olor", "Azucar"]
+        },
+        {
+            "name":"Semola con leche",
+            "price": 650,
+            "description":"La mezcla perfecta de semola, leche, canela y clavo de olor",
+            "ingredients":["Semola", "Leche", "Canela", "Clavo de olor", "Azucar"]
+        },
+        {
+            "name": "Babarua",
+            "price": 650,
+            "description": "Un postre diferente, refrescante y liviano ideal para compartir en familia",
+            "ingredients":["Gelatina de sabores", "Leche evaporada"]
+        },
+        {
+            "name": "Gelatina",
+            "price": 350,
+            "description":"Una amplia variedad de sabores tropicales hacen de este postre perfecto para días de calor",
+            "ingredients":["Gelatina de sabores"]
+        },
+        {
+            "name": "Gelatina con babarua",
+            "price": 0,
+            "description":"Dos ideas en una sola. Texturas que combinan a la perfeccion con una amplia variedad de sabores",
+            "ingredients":["Gelatina de sabores", "Leche evaporada"]
+        },
+        {
+            "name": "Leche asada",
+            "price": 800,
+            "description":"",
+            "ingredients":["Leche", "Huevos", "Azucar", "Canela"]
+        }
+    ]
+}

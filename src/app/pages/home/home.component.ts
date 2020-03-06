@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import data from '../../../services/data.json'
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit {
   initApp:Boolean = false
   showSectionPostres:Boolean = false
   constructor() { 
+    console.log(data)
     setTimeout(() => {
       this.initApp = true
     },1000)
