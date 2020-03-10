@@ -64,8 +64,65 @@
     ],
     "Promos":
     [
-        {
-            "name":"Promo 1"
-        }
+        [
+            {   
+                "id":"l1",
+                "name":"Promo económica",
+                "price": 5300,
+                "description":"3 Postres de leche (Semola con leche y/o Arroz con leche) + 3 Leches asadas"
+            },
+            {
+                "id":"l2",
+                "name":"Promo familiar",
+                "price": 10000,
+                "description": "6 Postres de leche (Semola con leche y/o Arroz con leche) + 6 Leches asadas"
+            },
+            {
+                "id":"l3",
+                "name":"Promo jumbo",
+                "price":14500,
+                "description":"9 Postres de leche (Semola con leche y/o Arroz con leche) + 9 Leches asadas"
+            }
+        ],
+        [
+            {
+                "id":"j1",
+                "name":"Promo económica",
+                "price": 5000,
+                "description":"4 Gelatinas + 3 Babaruas"
+            },
+            {
+                "id":"j2",
+                "name":"Promo familiar",
+                "price":10000,
+                "description":"8 Gelatinas + 7 Babaruas"
+            },
+            {
+                "id":"j3",
+                "name":"Promo jumbo",
+                "price":20000,
+                "description":"16 Gelatinas + 15 Babaruas"
+            }
+        ],
+        [
+            {
+                "id":"m1",
+                "name":"Promo económica",
+                "price": 5000,
+                "description":"1 Arroz con leche + 1 Semola con leche + 1 Babarua + 1 Gelatina + 1 Babarua con gelatina + 1 Leche asada"
+            },
+            {
+                "id":"m2",
+                "name":"Promo familiar",
+                "price": 9500,
+                "description":"2 Arroz con leche + 2 Semola con leche + 2 Babarua + 2 Gelatina + 2 Babarua con gelatina + 2 Leche asada"
+            },
+            {
+                "id":"m3",
+                "name":"Promo jumbo",
+                "price": 13500,
+                "description":"3 Arroz con leche + 3 Semola con leche + 3 Babarua + 3 Gelatina + 3 Babarua con gelatina + 3 Leche asada"
+            }
+        ]
     ]
 }
