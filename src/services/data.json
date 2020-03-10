@@ -2,40 +2,70 @@
     "Postres":
     [
         {
+            "id":1,
             "name":"Arroz con leche",
-            "price": 650,
+            "price": 1000,
             "description":"La receta de la abuela, el más rico arroz con leche en tu paladar",
-            "ingredients":["Arroz", "Leche", "Canela", "Clavo de olor", "Azucar"]
+            "ingredients":["Arroz", "Leche", "Canela", "Clavo de olor", "Azucar"],
+            "img":"assets/img/arroz.jpg",
+            "imgClass": "",
+            "txtClass":""
         },
         {
+            "id":2,
             "name":"Semola con leche",
-            "price": 650,
+            "price": 1000,
             "description":"La mezcla perfecta de semola, leche, canela y clavo de olor",
-            "ingredients":["Semola", "Leche", "Canela", "Clavo de olor", "Azucar"]
+            "ingredients":["Semola", "Leche", "Canela", "Clavo de olor", "Azucar"],
+            "img":"assets/img/semola.jpg",
+            "imgClass": "order-2 order-md-1",
+            "txtClass":"order-1 order-md-2"
         },
         {
-            "name": "Babarua",
-            "price": 650,
+            "id":3,
+            "name": "Babarua de sabores",
+            "price": 950,
             "description": "Un postre diferente, refrescante y liviano ideal para compartir en familia",
-            "ingredients":["Gelatina de sabores", "Leche evaporada"]
+            "ingredients":["Gelatina de sabores", "Leche evaporada"],
+            "img":"assets/img/babarua.jpg",
+            "imgClass": "order-1 order-md-2 order-lg-2 order-xl-1",
+            "txtClass":"order-2 order-md-1 order-lg-1 order-xl-2"
         },
         {
-            "name": "Gelatina",
-            "price": 350,
+            "id":4,
+            "name": "Gelatina de sabores",
+            "price": 650,
             "description":"Una amplia variedad de sabores tropicales hacen de este postre perfecto para días de calor",
-            "ingredients":["Gelatina de sabores"]
+            "ingredients":["Gelatina de sabores"],
+            "img":"assets/img/jaleas.jpg",
+            "imgClass": "order-2",
+            "txtClass":"order-1"
         },
         {
+            "id":5,
             "name": "Gelatina con babarua",
-            "price": 0,
+            "price": 950,
             "description":"Dos ideas en una sola. Texturas que combinan a la perfeccion con una amplia variedad de sabores",
-            "ingredients":["Gelatina de sabores", "Leche evaporada"]
+            "ingredients":["Gelatina de sabores", "Leche evaporada"],
+            "img":"assets/img/jalea_babarua.jpg",
+            "imgClass": "order-1 order-lg-1 order-xl-2",
+            "txtClass":"order-2 order-lg-2 order-xl-1"
         },
         {
-            "name": "Leche asada",
-            "price": 800,
-            "description":"",
-            "ingredients":["Leche", "Huevos", "Azucar", "Canela"]
+            "id":6,
+            "name": "Leche asada tradicionl",
+            "price": 1100,
+            "description":"El postre más sabroso que podrás probar en tu vida, la preparación tradicional de la leche asada casera",
+            "ingredients":["Leche", "Huevos", "Azucar", "Canela"],
+            "img":"assets/img/leche_asada.jpg",
+            "imgClass": "order-2 order-md-1 order-lg-1 order-xl-2",
+            "txtClass":"order-1 order-md-2 order-lg-2 order-xl-1"
+        }
+    ],
+    "Promos":
+    [
+        {
+            "name":"Promo 1"
         }
     ]
 }

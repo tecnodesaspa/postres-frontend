@@ -93,63 +93,17 @@
       </div> <!-- .section -->
       
       <div class="section pt-0 pb-0">
-
+        
         <div class="menus d-flex bg-light">
-          <div class="d-flex item">
-            <div class="image" style="background-image: url(../../assets/img/arroz.jpg);" data-aos="fade"></div>
-            <div class="text">
-              <h3>Arroz con leche</h3>
-              <p>La mezcla perfecta de arroz, leche, canela y clavo de olor.</p>
-              <p class="price">$5.00</p>
+            <div *ngFor="let dat of data" class="d-flex item">
+              <!-- <div class="image" style="background-image: url(../../assets/img/arroz.jpg);" data-aos="fade"></div> -->
+              <div class="image {{dat.imgClass}}" [ngStyle]="{'background-image': 'url(' + dat.img + ')' }"></div>
+              <div class="text {{dat.txtClass}}">
+                  <h3>{{dat.name}}</h3>
+                  <p>{{dat.description}}</p>
+                  <p class="price">${{dat.price}}</p>
+                </div>
             </div>
-          </div> <!-- .item -->
-
-          <div class="d-flex item">
-            <div class="image order-2 order-md-1"  style="background-image: url(../../assets/img/semola.jpg);" data-aos="fade" data-aos-delay="100"></div>
-            <div class="text order-1 order-md-2">
-              <h3>Sémola con leche</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-              <!-- <p class="price">$6.00</p> -->
-            </div>
-          </div> <!-- .item -->
-
-          <div class="d-flex item">
-            <div class="image order-1 order-md-2 order-lg-2 order-xl-1" style="background-image: url(../../assets/img/leche_asada.jpg);" data-aos="fade" data-aos-delay="200"></div>
-            <div class="text order-2 order-md-1 order-lg-1 order-xl-2">
-              <h3>Leche asada</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-              <!-- <p class="price">$9.00</p> -->
-              
-            </div>
-          </div> <!-- .item -->
-
-          <div class="d-flex item">
-            <div class="image order-2" style="background-image: url(../../assets/img/jaleas.jpg);" data-aos="fade" data-aos-delay="300"></div>
-            <div class="text order-1 mb-3">
-              <h3>Gelatina</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-              <!-- <p class="price">$13.00</p> -->
-            </div>
-          </div> <!-- .item -->
-
-          <div class="d-flex item">
-            <div class="image order-1 order-lg-1 order-xl-2" style="background-image: url(../../assets/img/babarua.jpg);" data-aos="fade" data-aos-delay="400"></div>
-            <div class="text order-2 order-lg-2 order-xl-1">
-              <h3>Babarua</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-              <!-- <p class="price">$9.00</p> -->
-            </div>
-          </div> <!-- .item -->
-
-          <div class="d-flex item">
-            <div class="image order-2 order-md-1 order-lg-1 order-xl-2" style="background-image: url(../../assets/img/jalea_babarua.jpg);" data-aos="fade" data-aos-delay="500"></div>
-            <div class="text order-1 order-md-2 order-lg-2 order-xl-1">
-              <h3>Gelatina con babarua</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
-              <!-- <p class="price">$7.00</p> -->
-            </div>
-          </div> <!-- .item -->
-
         </div>
       </div> <!-- .section -->
       

@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-// import data from '../../../services/data.json'
+import data from '../../../services/data.json'
 
 @Component({
   selector: 'app-home',
@@ -8,11 +8,12 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  data = data.Postres
   faCoffee= faCoffee
   initApp:Boolean = false
   showSectionPostres:Boolean = false
   constructor() { 
-    // console.log(data)
+    console.log(this.data)
     setTimeout(() => {
       this.initApp = true
     },1000)
@@ -33,16 +34,17 @@ export class HomeComponent implements OnInit {
     //   document.getElementById('linkServices').classList.remove('active')
     //   document.getElementById('linkAbout').classList.remove('active')
     // }
-    if(document.body.scrollTop > document.getElementById('sectionPostres').offsetTop ||     
-        document.documentElement.scrollTop > document.getElementById('about').offsetTop){
+    if(document.body.scrollTop + 300 > document.getElementById('sectionPostres').offsetTop ||     
+        document.documentElement.scrollTop + 300 > document.getElementById('sectionPostres').offsetTop){
+          this.showSectionPostres = true
     }
-    if(document.body.scrollTop > document.getElementById('portafolio').offsetTop ||     
-    document.documentElement.scrollTop > document.getElementById('portafolio').offsetTop){
-      document.getElementById('linkPortafolio').classList.add('active')
-      document.getElementById('linkAbout').classList.remove('active')
-    } else {
-      document.getElementById('linkPortafolio').classList.remove('active')
-    }
+    // if(document.body.scrollTop > document.getElementById('portafolio').offsetTop ||     
+    // document.documentElement.scrollTop > document.getElementById('portafolio').offsetTop){
+    //   document.getElementById('linkPortafolio').classList.add('active')
+    //   document.getElementById('linkAbout').classList.remove('active')
+    // } else {
+    //   document.getElementById('linkPortafolio').classList.remove('active')
+    // }
   }
   checkScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
