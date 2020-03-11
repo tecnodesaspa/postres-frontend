@@ -129,6 +129,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "postres-frontend"
+    }
+  },
+  "defaultProject": "postres-frontend",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

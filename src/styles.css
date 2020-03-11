@@ -117,59 +117,6 @@ textarea.form-control {
   height: 47px !important;
 }
 
-/* Site Menu*/
-.site-menu {
-  display: none;
-  background: black;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 21;
-  position: fixed;
-}
-
-.site-menu .site-menu-inner {
-  min-height: 100px;
-  height: calc(100vh - 150px);
-  margin-top: 150px;
-  overflow: auto;
-}
-
-.site-menu ul {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -70%);
-  -ms-transform: translate(-50%, -70%);
-  transform: translate(-50%, -70%);
-  padding-top: 5%;
-}
-
-.site-menu ul > li {
-  list-style: none;
-  visibility: hidden;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  top: -20px;
-  position: relative;
-  text-align: center;
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease;
-}
-
-.site-menu ul > li.is-show {
-  visibility: visible;
-  opacity: 1;
-  top: 0px;
-}
-
-.site-menu ul > li a {
-  color: #fff;
-  font-size: 30px;
-}
 
 /* Site Header */
 .site-header {

@@ -1,14 +1,9 @@
 <div class="site-wrap">
       
-    <nav class="site-menu">
+    <nav class="site-menu" [ngClass]="{'display-block':showMenu}">
       <div class="site-menu-inner">
         <ul class="list-unstyled">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="menu.html">Our Menu</a></li>
-          <li><a href="blog.html">Our Blog</a></li>
-          <li><a href="reservation.html">Reserve A Table</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="active"><a routerLink="/">Inicio</a></li>
         </ul>
       </div>
     </nav>
@@ -26,8 +21,7 @@
           <a routerLink="/" class="site-logo pointer">L</a>
         </div>
         <div class="col-5 col-md-3 text-right menu-burger-wrap">
-          <a class="site-nav-toggle js-site-nav-toggle pointer"><i></i></a>
-
+          <a class="site-nav-toggle js-site-nav-toggle pointer" (click)="openMenu()"><i></i></a>
         </div>
       </div>
      
@@ -38,7 +32,7 @@
         <div class="img_bg" style="background-image: url(assets/img/slider-1.jpg);"  data-stellar-background-ratio="0.5">
           <div class="container">
             <div class="row align-items-center">
-              <div class="col-md-12" [ngClass]="{'aos-init aos-animate':initApp}" data-aos="fade-up">
+              <div class="col-md-12 aos-init" [ngClass]="{'aos-animate':initApp}" data-aos="fade-up">
                 <h2 class="heading text-center">Postres Lucía</h2>
               </div>
             </div>
@@ -46,14 +40,14 @@
         </div>
       </div> <!-- .cover_1 -->
 
-      <div class="section services-section">
+      <div class="section services-section" id="sectionPostres">
         <div class="container">
            
-          <div class="row" id="sectionPostres">
+          <div class="row" >
             <div class="col-md-12 col-lg-12 col-sm-12 text-center">
               <h1>Postres</h1>
             </div>
-            <div class="col-md-6 col-lg-6 aos-init" data-aos="fade-up">
+            <div class="col-md-6 col-lg-6 aos-init" [ngClass]="{'aos-animate':showSectionPostres}" data-aos="fade-up">
               <div class="media feature-icon d-block text-center">
                 <div class="icon">
                   <img src="assets/icons/milk.svg" style="width: 60px; margin-top: 18px;">
@@ -65,7 +59,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-6 aos-init" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-6 col-lg-6 aos-init" [ngClass]="{'aos-animate':showSectionPostres}" data-aos="fade-up" data-aos-delay="100">
               <div class="media feature-icon d-block text-center">
                 <div class="icon">
                   <img src="assets/icons/fruit.svg" style="width: 60px; margin-top: 18px;">
@@ -81,10 +75,10 @@
         </div>
       </div> <!-- .section -->
 
-      <div class="section">
+      <div class="section" id="sectionTitleImages">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-md-7 text-center"  data-aos="fade-up">
+            <div class="col-md-7 text-center aos-init" [ngClass]="{'aos-animate':showTitleImages}"  data-aos="fade-up">
               <h2 class="mb-4">Nuestros productos</h2>
               <p class="lead">Elige el producto que más te guste y comienza a disfrutar.</p>
             </div>
@@ -92,11 +86,10 @@
         </div>
       </div> <!-- .section -->
       
-      <div class="section pt-0 pb-0">
-
+      <div class="section pt-0 pb-0" id="sectionImages">
         <div class="menus d-flex bg-light">
           <div class="d-flex item">
-            <div class="image" style="background-image: url(../../assets/img/arroz.jpg);" data-aos="fade"></div>
+            <div class="image aos-init" [ngClass]="{'aos-animate':showSectionImages}" style="background-image: url(../../assets/img/arroz.jpg);" data-aos="fade"></div>
             <div class="text">
               <h3>Arroz con leche</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -105,7 +98,7 @@
           </div> <!-- .item -->
 
           <div class="d-flex item">
-            <div class="image order-2 order-md-1"  style="background-image: url(../../assets/img/semola.jpg);" data-aos="fade" data-aos-delay="100"></div>
+            <div class="image order-2 order-md-1 aos-init" [ngClass]="{'aos-animate':showSectionImages}" style="background-image: url(../../assets/img/semola.jpg);" data-aos="fade" data-aos-delay="100"></div>
             <div class="text order-1 order-md-2">
               <h3>Sémola con leche</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -114,7 +107,7 @@
           </div> <!-- .item -->
 
           <div class="d-flex item">
-            <div class="image order-1 order-md-2 order-lg-2 order-xl-1" style="background-image: url(../../assets/img/leche_asada.jpg);" data-aos="fade" data-aos-delay="200"></div>
+            <div class="image order-1 order-md-2 order-lg-2 order-xl-1 aos-init" [ngClass]="{'aos-animate':showSectionImages}" style="background-image: url(../../assets/img/leche_asada.jpg);" data-aos="fade" data-aos-delay="200"></div>
             <div class="text order-2 order-md-1 order-lg-1 order-xl-2">
               <h3>Leche asada</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -124,8 +117,8 @@
           </div> <!-- .item -->
 
           <div class="d-flex item">
-            <div class="image order-2" style="background-image: url(../../assets/img/jaleas.jpg);" data-aos="fade" data-aos-delay="300"></div>
-            <div class="text order-1 mb-3">
+            <div class="image order-2 aos-init" [ngClass]="{'aos-animate':showSectionImages}" style="background-image: url(../../assets/img/jaleas.jpg);" data-aos="fade" data-aos-delay="300"></div>
+            <div class="text order-1">
               <h3>Gelatina</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
               <!-- <p class="price">$13.00</p> -->
@@ -133,7 +126,7 @@
           </div> <!-- .item -->
 
           <div class="d-flex item">
-            <div class="image order-1 order-lg-1 order-xl-2" style="background-image: url(../../assets/img/babarua.jpg);" data-aos="fade" data-aos-delay="400"></div>
+            <div class="image order-1 order-lg-1 order-xl-2 aos-init" [ngClass]="{'aos-animate':showSectionImages}" style="background-image: url(../../assets/img/babarua.jpg);" data-aos="fade" data-aos-delay="400"></div>
             <div class="text order-2 order-lg-2 order-xl-1">
               <h3>Babarua</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -142,7 +135,7 @@
           </div> <!-- .item -->
 
           <div class="d-flex item">
-            <div class="image order-2 order-md-1 order-lg-1 order-xl-2" style="background-image: url(../../assets/img/jalea_babarua.jpg);" data-aos="fade" data-aos-delay="500"></div>
+            <div class="image order-2 order-md-1 order-lg-1 order-xl-2 aos-init" [ngClass]="{'aos-animate':showSectionImages}" style="background-image: url(../../assets/img/jalea_babarua.jpg);" data-aos="fade" data-aos-delay="500"></div>
             <div class="text order-1 order-md-2 order-lg-2 order-xl-1">
               <h3>Gelatina con babarua</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo quisquam saepe quaerat.</p>
@@ -156,10 +149,10 @@
       
       <!-- .section -->
 
-      <div class="section">
+      <div class="section" id="sectionPromo">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-md-8" data-aos="fade-up">
+            <div class="col-md-8 aos-init"  [ngClass]="{'aos-animate':showSectionPromo}" data-aos="fade-up">
 
               <h2 class="mb-5 text-center">Nuestras promociones</h2>
 
