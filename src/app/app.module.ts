@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ThousandsPipe } from './pipes/thousands.pipe';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ThousandsPipe
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import data from './postres.json'
+import data from '../../../services/data.json'
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,8 @@ import data from './postres.json'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  data = data.Postres
+  promos = data.Promos
   faCoffee= faCoffee
   initApp:Boolean = false
   showSectionPostres:Boolean = false
@@ -16,6 +18,7 @@ export class HomeComponent implements OnInit {
   showSectionPromo:Boolean = false
   showMenu:Boolean = false
   constructor() { 
+    console.log(this.data)
     setTimeout(() => {
       this.initApp = true
     },1000)
@@ -26,26 +29,26 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if(document.body.scrollTop + 200 > document.getElementById('sectionPostres').offsetTop ||     
-        document.documentElement.scrollTop + 200 > document.getElementById('sectionPostres').offsetTop){
+    if(document.body.scrollTop + 300 > document.getElementById('sectionPostres').offsetTop ||     
+        document.documentElement.scrollTop + 300 > document.getElementById('sectionPostres').offsetTop){
           this.showSectionPostres = true
     } else {
       this.showSectionPostres = false
     }
-    if(document.body.scrollTop + 200 > document.getElementById('sectionTitleImages').offsetTop ||     
-        document.documentElement.scrollTop + 200 > document.getElementById('sectionTitleImages').offsetTop){
+    if(document.body.scrollTop + 300 > document.getElementById('sectionTitleImages').offsetTop ||     
+        document.documentElement.scrollTop + 300 > document.getElementById('sectionTitleImages').offsetTop){
           this.showTitleImages = true
     } else {
       this.showTitleImages = false
     }
-    if(document.body.scrollTop + 200 > document.getElementById('sectionImages').offsetTop ||     
-        document.documentElement.scrollTop + 200 > document.getElementById('sectionImages').offsetTop){
+    if(document.body.scrollTop + 300 > document.getElementById('sectionImages').offsetTop ||     
+        document.documentElement.scrollTop + 300 > document.getElementById('sectionImages').offsetTop){
           this.showSectionImages = true
     } else {
       this.showSectionImages = false
     }
-    if(document.body.scrollTop + 200 > document.getElementById('sectionPromo').offsetTop ||     
-        document.documentElement.scrollTop + 200 > document.getElementById('sectionPromo').offsetTop){
+    if(document.body.scrollTop + 300 > document.getElementById('sectionPromo').offsetTop ||     
+        document.documentElement.scrollTop + 300 > document.getElementById('sectionPromo').offsetTop){
           this.showSectionPromo = true
     } else {
       this.showSectionPromo = false
